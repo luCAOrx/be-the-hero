@@ -57,13 +57,13 @@ export default function Incidents() {
             </View>
 
             <Text style={styles.title}>Ben Vindo!</Text>
-            <Text style={styles.description}>Escolha um dos casos casos abaixo e salve o dia.</Text>
+            <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia.</Text>
 
             <FlatList
                 data={incidents}
                 style={styles.incidentList}
                 keyExtractor={incident => String(incident.id)}
-                //showsVerticalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 onEndReached={loadIncidents}
                 onEndReachedThreshold={0.2}
                 renderItem={({ item: incident }) => (
